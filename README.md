@@ -1,28 +1,29 @@
 # Built-environment-energy-consumption-monitoring-prediction-and-control-
-本项目依托于人工智能算法，在对建筑环境及能耗数据有效采集的基 础上，通过深度强化学习寻找最优方法，从而构建建筑环境、建筑能耗预测模型以及两者协调控制机制，从而实现能源的合理利用，促进建筑智能化、生态化发展。
 
-## 项目背景
-建筑高能耗问题一般存在于大型公共建筑，大型公共建筑-般是指单体建筑面积在 2 万平方米以上,采用中央空调的办公、商业、旅游、科教文卫、通信以及交通枢纽等公共 建筑。其中大型办公建筑属于典型的大型公共建筑，一般是指供机关、团体和企事业单 位办理行政事务和从事各类业务活动的建筑物，因此具备大型公共建筑能耗高的特点。 统计资料表明，目前我国大型办公建筑面积约 4-5 亿平方米，占全国城镇建筑总量的 4% 左右，但其年耗电量却占到我国城镇建筑总耗电量的 22%。据历年《中国建筑节能年度发 展研究报告》统计，我国大型办公建筑平均能耗为 101.77kWh/平方米·年，与我国城镇 住宅单位面积能耗17.4kWh/平方米·年相比，大型办公建筑的平均能耗是城镇住宅的5-10 倍。大型办公建筑节能潜力普遍在 30%以上。其中，在建筑节能问题中，建筑能耗预测一 直受到国内外广泛学者的关注，因此，对于建筑能耗预测方法的研究显得势在必行。
+This project relies on artificial intelligence algorithms, on the basis of effective collection of building environment and energy consumption data, through deep reinforcement learning to find the optimal method, so as to build a building environment, building energy consumption prediction model and a coordinated control mechanism between the two, so as to achieve the rational use of energy, promotes the intelligent and ecological development of buildings.
 
-另一方面，大型办公建筑内人员密集，空间相对封闭，潜在建筑环境质量低下，以 及患有病态建筑综合症的可能性。研究表明，有效改善建筑环境质量，可以将建筑内部 人员的工作效率提高 15%-20%。因此，建筑环境质量问题也是绿色建筑发展过程中应高度 重视的问题，目前建筑环境智能监测技术并不完善，缺乏有效的智能监测手段。
+## Background
+The problem of high building energy consumption generally exists in large public buildings. Large public buildings generally refer to public buildings with a single building area of more than 20,000 square meters, office, commerce, tourism, science, education, culture, health, communication, and transportation hubs that use central air conditioning. Among them, large-scale office buildings are typical large-scale public buildings, which generally refer to buildings that are used for administrative affairs and various business activities for agencies, groups, enterprises and institutions, so they have the characteristics of high energy consumption of large-scale public buildings. Statistics show that the current large-scale office building area in my country is about 400-500 million square meters, accounting for about 4% of the total urban buildings in the country, but its annual power consumption accounts for 22% of the total power consumption of urban buildings in my country. According to the statistics of "China Building Energy Conservation Annual Development Research Report" over the years, the average energy consumption of large office buildings in my country is 101.77kWh/m2. The average energy consumption is 5-10 times that of urban dwellings. The energy saving potential of large office buildings is generally above 30%. Among them, in the building energy conservation problem, building energy consumption prediction has been concerned by scholars at home and abroad. Therefore, it is imperative to study building energy consumption prediction methods.
 
-同时，建筑本身是一个多系统耦合、非线性、多目标的复杂系统，其中建筑环境 与建筑能耗就有着密切而复杂的联系，因此如何监督控制建筑环境和平衡建筑能耗，保 证建筑环境与节能的协调状态合理成为了业界研究的难点之一。
+On the other hand, large office buildings are densely populated with relatively closed spaces, potentially low quality of the built environment, and the possibility of sick building syndrome. Studies have shown that effectively improving the quality of the built environment can increase the work efficiency of building personnel by 15%-20%. Therefore, the quality of the building environment is also a problem that should be attached great importance to in the development of green buildings. At present, the intelligent monitoring technology of the building environment is not perfect, and there is a lack of effective intelligent monitoring methods.
+
+At the same time, the building itself is a complex system with multi-system coupling, nonlinearity and multi-objective, in which the building environment and building energy consumption are closely and complexly linked. The reasonable coordination state of energy saving has become one of the difficulties in the research of the industry.
 
 
-## 深度强化学习在建筑环境与建筑节能方向的研究现状
-深度强化学习在智能建筑方面的应用也已经引起国内外学者的广泛关注。Dalamagkidis K 等人提出设计一种线性强化学习控制器，可监督控制建筑热舒适度、空气 质量、光照需求度、噪音等，与传统 Fuzzy-PD 相比，其效果更优；Yu Z 等人提出了一种用强化学习在线调整低能耗建筑系统的监督模糊控制器的无模型方法，其中用 Q-learning 算法监控建筑物的能源系统；Bielskis 等人利用强化学习方法构建室内照明控制器，通过 强化学习方法自适应调节照明系统，进而节约能源消耗；Li 等人提出一种网格 Q-learning 算法，并将该算法应用用于智慧建筑的节能方面，求解出最优控制的策略，与传统 Q-learning 方法相比，其算法具有较快的收敛速度以及较好的收敛性能；Bocheng 提出一 种多网格 Q-learning 方法，通过近似建筑环境模型求解近似节能优化策略，并将初始策 略用于精确建筑模型，在线学习最优控制策略，加快算法求解实际问题中的收敛速度；Liu.S等人提出基于强化学习 Q-learning 算法监督控制建筑热质量，进而节约能源消耗。
+## Research Status of Deep Reinforcement Learning in Building Environment and Building Energy Efficiency
+The application of deep reinforcement learning in intelligent buildings has also attracted extensive attention from scholars at home and abroad. Dalamagkidis K et al. proposed to design a linear reinforcement learning controller that can supervise and control building thermal comfort, air quality, light demand, noise, etc. Compared with traditional Fuzzy-PD, its effect is better; Yu Z et al. A model-free method for online tuning of supervised fuzzy controllers for low-energy building systems using reinforcement learning, in which a Q-learning algorithm is used to monitor the building's energy system; Bielskis et al. The learning method adaptively adjusts the lighting system, thereby saving energy consumption; Li et al. proposed a grid Q-learning algorithm and applied the algorithm to the energy saving of smart buildings to solve the optimal control strategy, which is comparable to the traditional Q-learning algorithm. Compared with the -learning method, its algorithm has a faster convergence speed and better convergence performance; Bocheng proposed a multi-grid Q-learning method, which solves the approximate energy-saving optimization strategy by approximating the building environment model, and uses the initial strategy for Accurate building model, online learning optimal control strategy, and speeding up the convergence speed of the algorithm in solving practical problems; Liu.S et al. proposed a Q-learning algorithm based on reinforcement learning to supervise and control building thermal mass, thereby saving energy consumption.
 
-## 项目研究基础
-1) 建筑环境信息采集器：
+## Project Research Basis
+1) Building Environment Information Collector：
 ![这是图片](/images/采集器.png)
-如图，目前制作完成的数据采集模块可以测量湿度(envHunidity)、温度(envTemperature)、大气压强(envAtmosphericPressure)、一氧化碳气体浓度(envCo)、甲烷气体浓度(envCh4)、液化气浓度(envLpg)、光照强度(envIlluminationIntensity)等建筑环境信息数据。通过蓝牙无线传输模块将单片机收集的数据无线传输给树莓派，树莓派将采集到的数据进行格式的统一和整理，然后通过 WiFi 或网线将环境信息数据上传至服务器。
+As shown in the figure, the completed data acquisition module can measure humidity (envHunidity), temperature (envTemperature), atmospheric pressure (envAtmosphericPressure), carbon monoxide gas concentration (envCo), methane gas concentration (envCh4), liquefied gas concentration (envLpg), illumination Intensity (envIlluminationIntensity) and other building environment information data. The data collected by the microcontroller is wirelessly transmitted to the Raspberry Pi through the Bluetooth wireless transmission module. The Raspberry Pi unifies and organizes the format of the collected data, and then uploads the environmental information data to the server through WiFi or network cable.
 
-2) 前端数据可视化：
+2) Front-end data visualization：
 ![这是图片](/images/前端.png)
 ![这是图片](/images/可视化.png)
 
-## 成果
-1、实现对建筑环境信息的有效采集、存储和处理以及大规模部署 
-2、构建一套建筑环境和建筑能耗动态预测模型 
-3、提出一种建筑环境与建筑能耗协调控制机制 
-4、开发一个建筑环境、能耗监测、预测和控制平台
+## achievement
+1、Realize the effective collection, storage and processing of building environment information and large-scale deployment
+2、Construct a set of dynamic prediction models for building environment and building energy consumption
+3、A Coordinated Control Mechanism of Building Environment and Building Energy Consumption
+4、Develop a building environment, energy consumption monitoring, prediction and control platform
